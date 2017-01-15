@@ -99,14 +99,15 @@ class KC_Shortcodes {
 
 		if ( ! empty($the_link['url'])) {  
 
-			if ( ! empty ($new_target = $the_link['target'])) { 
+			$new_target = $the_link['target']; 
+			if ( ! empty( $new_target )) { 
 				$the_target = $new_target; 
 			} else { 
 				$the_target = '_self'; 
 			}
 
 			$l = ''; 
-			$l.= '<a href="#" class="btn btn-'.$color.'">'.$label.'</a>'; 
+			$l.= '<a href="'.$the_link['url'].'" class="btn btn-'.$color.'">'.$label.'</a>'; 
 			return $l; 
 
 		} else {

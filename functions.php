@@ -31,5 +31,7 @@ if ( ! function_exists('childtheme_setup')) :
 endif; 
 add_action('after_setup_theme', 'childtheme_setup'); 
 
+require 'includes/template-tags.php'; 
+
 
 ?>
